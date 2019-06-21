@@ -9,8 +9,9 @@
   }
   .on-mid{
     img{
-      width: 100%;
+      width: 318px;
       height: auto;
+      padding: 20px 10px 20px 0;
     }
     .slogan{
       p{
@@ -19,6 +20,7 @@
         line-height: 22px;
         color: $sub-color;
         font-weight: bold;
+        text-transform: uppercase;
       }
     }
     .address{

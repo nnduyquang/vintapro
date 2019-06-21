@@ -36,6 +36,7 @@
 </div>
 
 {{ Html::script('js/core.common.js') }}
+{{ Html::script('js/module.common.js') }}
 
 
 

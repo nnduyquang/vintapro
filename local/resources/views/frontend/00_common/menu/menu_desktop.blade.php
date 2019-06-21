@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between align-items-center">
-                    <p>Email: ceo@vintapro.com</p>
+                    <p>Email: {{$listFrontendCommon['config_info_email']}}</p>
                     <div class="d-flex align-items-center">
 
                         <a href="#"><i class="fab fa-facebook-square mr-2" style="font-size: 25px;color: white"></i>
@@ -22,21 +22,20 @@
                 <div class="col-md-12 d-flex align-items-center justify-content-between">
 
                     <div class="d-flex align-items-center">
-                        <img src="https://ketoanuytin.com/images/logo/logo.png" alt="">
+                        <img src="{{URL::to($listFrontendCommon['config_logo'])}}" alt="">
                         <div class="slogan" style="color: #055f93">
-                            <p class="mb-1">CÔNG TY TNHH NGUYỄN THẮNG DỊCH VỤ KẾ TOÁN UY TÍN</p>
+                            <p class="mb-1">{{$listFrontendCommon['config_title']}}</p>
                         </div>
                     </div>
 
                     <div class="address d-flex align-items-center">
                         <div class="d-flex align-items-center">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p class="">189 Đường Tây Thạnh, Phường Tây Thạnh, Quận Tân Phú, TP.HCM</p>
+                            <p class="">{{$listFrontendCommon['config_address']}}</p>
                         </div>
                         <div class="ml-5 d-flex align-items-center">
                             <i class="fas fa-phone-square"></i>
-                            <p style="width: fit-content">0907.468.264<br>
-                                0907.468.264</p>
+                            <p style="width: fit-content">{{$listFrontendCommon['config_phone']}}
                         </div>
                     </div>
                 </div>

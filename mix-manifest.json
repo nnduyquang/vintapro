@@ -4,6 +4,7 @@
     "/s/backend.css": "/s/backend.css",
     "/ss/common.css": "/ss/common.css",
     "/ss/home.css": "/ss/home.css",
+    "/s/core.common.js": "/s/core.common.js",
     "/s/backend.js": "/s/backend.js",
-    "/s/core.common.js": "/s/core.common.js"
+    "/s/module.common.js": "/s/module.common.js"
 }

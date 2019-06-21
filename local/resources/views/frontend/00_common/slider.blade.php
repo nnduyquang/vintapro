@@ -1,4 +1,4 @@
-<div id="slider">
+
     <div class="slider-wrapper theme-default">
         <div id="slider" class="nivoSlider">
             @php
@@ -9,4 +9,3 @@
             @endforeach
         </div>
     </div>
-</div>
