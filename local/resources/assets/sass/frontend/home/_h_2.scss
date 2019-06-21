@@ -1,0 +1,51 @@
+#h_2 {
+  padding: 20px 0 20px 0;
+  h5 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 25px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 68px;
+      background-color: $main-color;
+      left: 50%;
+      bottom: -10px;
+      transform: skewX(45deg) translateX(-50%);
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 38px;
+      background-color: $sub-color;
+      left: calc(50%);
+      bottom: -10px;
+      transform: skewX(45deg) translateX(-50%);
+    }
+    span {
+      color: $main-color;
+    }
+  }
+  .description {
+    line-height: 1.5;
+    a.btn-xemthem{
+      padding: 10px 14px;
+      background-color: $main-color;
+      color: white;
+      font-size: 13px;
+      transition: .6s;
+    }
+  }
+  .image-content {
+    img {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+    }
+  }
+}

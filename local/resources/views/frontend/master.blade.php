@@ -31,7 +31,7 @@
 @yield('container')
 
 <div class="footer">
-    {{--@include('frontend.00_common.footer')--}}
+    @include('frontend.00_common.footer')
     {{--@include('frontend.00_common.footer_2')--}}
 </div>
 

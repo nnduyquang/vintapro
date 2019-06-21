@@ -4,7 +4,7 @@
             <div class="col-md-12 mt-5">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Quản Lý Chuyên Mục Bài Viết</h3>
+                        <h3 class="card-title">Quản Lý Chuyên Mục</h3>
 
                         <div class="card-tools">
                             <button class="btn btn-success" @click.prevent="sortModal">Sắp Xếp <i
@@ -103,6 +103,15 @@
                             </textarea>
                                 <has-error :form="form" field="description"></has-error>
                             </div>
+
+                            <div class="form-group">
+                                <label>Hình Ảnh Đại Diện</label>
+                                <main-image :pathImage="form.img_primary" idShow="showHinh" idInputPath="pathImage"
+                                            idInputHidden="one_image_id"></main-image>
+                            </div>
+
+                            <!-- /.card -->
+
                             <!--<div class="form-group">-->
                             <span>Kích hoạt</span>
                             <input name="is_active" type="checkbox"
@@ -138,7 +147,7 @@
                                 <ol ref="add_loop_li" class="dd-list">
                                     <!--vòng lặp-->
                                     <category-loop-li :key="index" v-for="(category,index) in categories" :level="0"
-                                             :category="category"></category-loop-li>
+                                                      :category="category"></category-loop-li>
                                     <!--kết thúc vòng lạp-->
                                 </ol>
                             </div>
@@ -176,6 +185,7 @@
                     slug: '',
                     description: '',
                     is_active: 0,
+                    img_primary: '',
                     type: this.category_type
                 })
             }
@@ -313,7 +323,7 @@
             loadCategories() {
                 // if (this.$gate.isAdminOrAuthor()) {
 //                axios.get('api/user').then(({data}) => (this.users = data.data));
-                axios.get('api/category-post',{params:this.axiosParams}).then(({data}) => (this.categories = data));
+                axios.get('api/category-post', {params: this.axiosParams}).then(({data}) => (this.categories = data));
 
                 // }
             },
@@ -353,6 +363,9 @@
             });
             Fire.$on('changeSort', (data) => {
                 this.formSort.listSort = data;
+            });
+            Fire.$on('UpdateImgPrimary', ($content) => {
+                this.form.img_primary = $content
             });
             // $('input[type=checkbox]').bootstrapToggle({
             //     size:"large"

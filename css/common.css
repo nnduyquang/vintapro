@@ -114,8 +114,42 @@
 }
 .nivo-controlNav a.active {
 	font-weight:bold;
-}/*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+}@font-face {}html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, a:hover, a:active {
+  text-decoration: none !important;
+}
+
+/*!
+ * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 .fa,
@@ -688,6 +722,14 @@ readers do not read off random characters that represent icons */
   content: "\F24E";
 }
 
+.fa-balance-scale-left:before {
+  content: "\F515";
+}
+
+.fa-balance-scale-right:before {
+  content: "\F516";
+}
+
 .fa-ban:before {
   content: "\F05E";
 }
@@ -778,6 +820,10 @@ readers do not read off random characters that represent icons */
 
 .fa-bicycle:before {
   content: "\F206";
+}
+
+.fa-biking:before {
+  content: "\F84A";
 }
 
 .fa-bimobject:before {
@@ -894,6 +940,18 @@ readers do not read off random characters that represent icons */
 
 .fa-bootstrap:before {
   content: "\F836";
+}
+
+.fa-border-all:before {
+  content: "\F84C";
+}
+
+.fa-border-none:before {
+  content: "\F850";
+}
+
+.fa-border-style:before {
+  content: "\F853";
 }
 
 .fa-bowling-ball:before {
@@ -2060,6 +2118,10 @@ readers do not read off random characters that represent icons */
   content: "\F082";
 }
 
+.fa-fan:before {
+  content: "\F863";
+}
+
 .fa-fantasy-flight-games:before {
   content: "\F6DC";
 }
@@ -2964,6 +3026,10 @@ readers do not read off random characters that represent icons */
   content: "\F7AD";
 }
 
+.fa-icons:before {
+  content: "\F86D";
+}
+
 .fa-id-badge:before {
   content: "\F2C1";
 }
@@ -3648,10 +3714,6 @@ readers do not read off random characters that represent icons */
   content: "\F5A8";
 }
 
-.fa-nintendo-switch:before {
-  content: "\F418";
-}
-
 .fa-node:before {
   content: "\F419";
 }
@@ -3896,6 +3958,10 @@ readers do not read off random characters that represent icons */
   content: "\F095";
 }
 
+.fa-phone-alt:before {
+  content: "\F879";
+}
+
 .fa-phone-slash:before {
   content: "\F3DD";
 }
@@ -3904,8 +3970,16 @@ readers do not read off random characters that represent icons */
   content: "\F098";
 }
 
+.fa-phone-square-alt:before {
+  content: "\F87B";
+}
+
 .fa-phone-volume:before {
   content: "\F2A0";
+}
+
+.fa-photo-video:before {
+  content: "\F87C";
 }
 
 .fa-php:before {
@@ -4202,6 +4276,10 @@ readers do not read off random characters that represent icons */
 
 .fa-registered:before {
   content: "\F25D";
+}
+
+.fa-remove-format:before {
+  content: "\F87D";
 }
 
 .fa-renren:before {
@@ -4652,16 +4730,32 @@ readers do not read off random characters that represent icons */
   content: "\F15D";
 }
 
+.fa-sort-alpha-down-alt:before {
+  content: "\F881";
+}
+
 .fa-sort-alpha-up:before {
   content: "\F15E";
+}
+
+.fa-sort-alpha-up-alt:before {
+  content: "\F882";
 }
 
 .fa-sort-amount-down:before {
   content: "\F160";
 }
 
+.fa-sort-amount-down-alt:before {
+  content: "\F884";
+}
+
 .fa-sort-amount-up:before {
   content: "\F161";
+}
+
+.fa-sort-amount-up-alt:before {
+  content: "\F885";
 }
 
 .fa-sort-down:before {
@@ -4672,8 +4766,16 @@ readers do not read off random characters that represent icons */
   content: "\F162";
 }
 
+.fa-sort-numeric-down-alt:before {
+  content: "\F886";
+}
+
 .fa-sort-numeric-up:before {
   content: "\F163";
+}
+
+.fa-sort-numeric-up-alt:before {
+  content: "\F887";
 }
 
 .fa-sort-up:before {
@@ -4702,6 +4804,10 @@ readers do not read off random characters that represent icons */
 
 .fa-speaker-deck:before {
   content: "\F83C";
+}
+
+.fa-spell-check:before {
+  content: "\F891";
 }
 
 .fa-spider:before {
@@ -5560,6 +5666,10 @@ readers do not read off random characters that represent icons */
   content: "\F40B";
 }
 
+.fa-voicemail:before {
+  content: "\F897";
+}
+
 .fa-volleyball-ball:before {
   content: "\F45F";
 }
@@ -5829,7 +5939,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -5848,7 +5958,25 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../webfonts/fa-regular-400.eot");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
@@ -5940,4 +6068,91 @@ readers do not read off random characters that represent icons */
 
 #menu_desktop .on-bottom ul li a:hover {
   text-decoration: none;
+}
+
+#call_now_button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #E52727;
+  color: white;
+  padding: 5px;
+  z-index: 100000;
+  font-size: 1.1em;
+}
+
+#call_now_button ul {
+  margin: 0;
+}
+
+#call_now_button li {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#call_now_button li a {
+  color: white;
+}
+
+#call_now_button li:last-child {
+  margin-right: 0;
+}
+
+#footer {
+  background-color: #E52727;
+  padding: 30px 0 0px;
+  margin-bottom: 40px;
+}
+
+#footer span {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+#footer .is-divider {
+  height: 3px;
+  display: block;
+  background-color: #8AC12F;
+  margin: 1em 0 1em;
+  width: 100%;
+  max-width: 30px;
+}
+
+#footer .description {
+  line-height: 1.5;
+  color: white;
+}
+
+#footer ul li {
+  list-style: none;
+  padding: 6px 0;
+  color: white;
+  line-height: 1.5;
+}
+
+#footer ul li a {
+  color: white;
+}
+
+#footer ul li i {
+  padding-right: 10px;
+}
+
+#footer .copy-right {
+  padding: 20px 0px;
+  color: white;
+  background-color: #8AC12F;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+#footer .copy-right a {
+  color: white;
+  font-weight: bold;
 }

@@ -37,6 +37,9 @@ class Category extends Model
         }
         return $newArray;
     }
+    public function getFirstParentCategoriesByType($type){
+        return $categories = $this->where('type', $type)->where('parent_id', NULL)->orderBy('order')->get();
+    }
 
     public function getChildren($childrens, &$newArray)
     {
@@ -50,6 +53,15 @@ class Category extends Model
 
     }
     public function prepareParameters($parameters){
+        $pathImage = $parameters->input('img_primary');
+        if (!IsNullOrEmptyString($pathImage)) {
+            if (hasHttpOrHttps($pathImage)) {
+                $pathImage = substr($pathImage, strpos($pathImage, 'images'), strlen($pathImage) - 1);
+            }
+            $parameters->request->add(['img_primary' => $pathImage]);
+        } else {
+            $parameters->request->add(['img_primary' => null]);
+        }
         return $parameters;
     }
 }

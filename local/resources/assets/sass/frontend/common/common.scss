@@ -1,8 +1,10 @@
 @import "../variables";
+@import "../reset";
 $fa-font-path: "../webfonts";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 @import "~nivo-slider/nivo-slider.css";
 
@@ -10,3 +12,4 @@ $fa-font-path: "../webfonts";
 @import "menu/menu_desktop";
 @import "menu/menu_mobile";
 @import "slider";
+@import "footer";

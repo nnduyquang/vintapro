@@ -53,7 +53,7 @@
                 <!-- /.card -->
             </div>
         </div>
-        <insert-update-post v-show="showUpdate" :editMode="editMode"></insert-update-post>
+        <insert-update-service v-show="showUpdate" :editMode="editMode"></insert-update-service>
     </div>
 </template>
 <script>
@@ -64,7 +64,7 @@
                 showIndex:true,
                 posts: {},
                 editMode: false,
-                post_type:0
+                post_type:5
             }
         },
         methods: {

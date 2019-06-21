@@ -3,6 +3,7 @@
 namespace App\Repositories\Frontend;
 
 
+use App\Category;
 use App\Config;
 
 class FrontendRepository implements FrontendRepositoryInterface
@@ -10,11 +11,10 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getFrontend()
     {
         $data = [];
-
+        $category = new Category();
+        $data['h1_categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
         return $data;
     }
-
-
 
 
     public function getFrontendCommon()
@@ -22,7 +22,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data = [];
         $config = new Config();
         $dataConfig = $config->getConfigByListName(['config_phone', '	
-config_describe_contact', 'config_hotline_show', 'config_hotline_call', 'config_info_email', 'config_title', 'config_address', 'config_logo', 'config_script_header', 'config_script_body', 'config_slider', 'seo_title', 'seo_description', 'seo_image','config_descrtiption']);
+config_describe_contact', 'config_hotline_show', 'config_hotline_call', 'config_info_email', 'config_title', 'config_address', 'config_logo', 'config_script_header', 'config_script_body', 'config_slider', 'seo_title', 'seo_description', 'seo_image', 'config_descrtiption']);
         foreach ($dataConfig as $key => $item) {
             if ($item->name == 'config_phone')
                 $data['config_phone'] = $item->content;
@@ -57,7 +57,6 @@ config_describe_contact', 'config_hotline_show', 'config_hotline_call', 'config_
         }
         return $data;
     }
-
 
 
 }

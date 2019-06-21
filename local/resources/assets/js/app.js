@@ -50,6 +50,7 @@ Vue.component(
     'product-index',
     require('./components/backend/product/product-index.vue')
 );
+
 Vue.component(
     'text-area',
     require('./components/backend/form/text-area.vue')
@@ -70,7 +71,10 @@ Vue.component(
     'insert-update-product',
     require('./components/backend/product/insert-update-product.vue')
 );
-
+Vue.component(
+    'insert-update-service',
+    require('./components/backend/service/insert-update-service.vue')
+);
 Vue.component(
     'tree-view-category',
     require('./components/backend/form/tree-view-category/tree-view-category.vue')
@@ -108,6 +112,11 @@ Vue.component(
     'slider-config',
     require('./components/backend/config/detail/slider-config.vue')
 );
+Vue.component(
+    'service-index',
+    require('./components/backend/service/service-index.vue')
+);
+
 
 
 //USING

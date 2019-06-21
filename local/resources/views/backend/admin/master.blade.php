@@ -113,11 +113,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview" style="display:{{set_open_active_child_menu(['category-post','category-product'])}};">
+                        <ul class="nav nav-treeview" style="display:{{set_open_active_child_menu(['category-post','category-product','category-service'])}};">
                             <li class="pl-5 nav-item">
                                 <a  href="{{route('category-post')}}" class="nav-link {{ set_active('category-post') }}">
                                     <i class="fas fa-server nav-icon"></i>
-                                    <p>Bài Viết</p>
+                                    <p>Tin Tức</p>
+                                </a>
+                            </li>
+                            <li class="pl-5 nav-item">
+                                <a  href="{{route('category-service')}}" class="nav-link {{ set_active('category-service') }}">
+                                    <i class="fas fa-server nav-icon"></i>
+                                    <p>Dịch Vụ</p>
                                 </a>
                             </li>
                             <li class="pl-5 nav-item">
@@ -148,18 +154,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a  href="{{route('post')}}" class="nav-link {{ set_active('post') }}">
                             <i class="nav-icon fas fa-newspaper"></i>
                             <p>
-                                Quản Lý Bài Viết
+                                Quản Lý Tin Tức
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a  href="{{route('product')}}" class="nav-link {{ set_active('product') }}">
-                            <i class="nav-icon fas fa-cubes"></i>
+                        <a  href="{{route('service')}}" class="nav-link {{ set_active('service') }}">
+                            <i class="nav-icon fas fa-newspaper"></i>
                             <p>
-                                Quản Lý Sản Phẩm
+                                Quản Lý Dịch Vụ
                             </p>
                         </a>
                     </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a  href="{{route('product')}}" class="nav-link {{ set_active('product') }}">--}}
+                            {{--<i class="nav-icon fas fa-cubes"></i>--}}
+                            {{--<p>--}}
+                                {{--Quản Lý Sản Phẩm--}}
+                            {{--</p>--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
                     {{--<li class="nav-item">--}}
                     {{--<router-link to="{{get_base_url()}}/category-test" class="nav-link">--}}
                     {{--<i class="nav-icon fas fas fa-book"></i>--}}

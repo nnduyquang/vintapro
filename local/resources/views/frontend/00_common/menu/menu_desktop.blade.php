@@ -57,3 +57,32 @@
         </div>
     </div>
 </div>
+<div id="call_now_button" class="d-none d-md-block d-lg-block">
+    <div class="container">
+        <ul class="contact float-right">
+            <li>
+<span class="fa-stack fa-1x">
+<i class="far fa-circle fa-stack-2x"></i>
+<i class="fa fa-phone fa-stack-1x"></i>
+</span>
+                {{ $listFrontendCommon['config_phone'] }}
+            </li>
+
+
+            <li>
+<span class="fa-stack fa-1x">
+<i class="far fa-circle fa-stack-2x"></i>
+<i class="fa fa-envelope fa-stack-1x"></i>
+</span>
+                {{ $listFrontendCommon['config_info_email'] }}
+            </li>
+            <li>
+                <span class="fa-stack fa-1x">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-directions fa-stack-1x"></i>
+                </span>
+                <a href="{{URL::to('lien-he')}}">Liên Hệ</a>
+            </li>
+        </ul>
+    </div>
+</div>

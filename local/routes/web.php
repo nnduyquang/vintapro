@@ -28,9 +28,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('category-product', function () {
         return view('backend.admin.category-product.index');
     })->name('category-product');
+    Route::get('category-service', function () {
+        return view('backend.admin.category-service.index');
+    })->name('category-service');
     Route::get('post', function () {
         return view('backend.admin.post.index');
     })->name('post');
+    Route::get('service', function () {
+        return view('backend.admin.service.index');
+    })->name('service');
     Route::get('product', function () {
         return view('backend.admin.product.index');
     })->name('product');
