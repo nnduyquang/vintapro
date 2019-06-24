@@ -13,4 +13,6 @@ interface FrontendRepositoryInterface
 
     public function getServicePost($pathService,$pathPost);
 
+    public function getNewsDetail($path);
+
 }

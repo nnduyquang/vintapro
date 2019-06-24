@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    {{$listFrontendCommon['config_title']}}
+    {{$data['post']->title}}
 @stop
 @section('description')
-    {{loai_bo_html_tag($listFrontendCommon['config_descrtiption'])}}
+    {{loai_bo_html_tag($data['post']->description)}}
 @stop
 @section('keyword')
 
@@ -15,7 +15,7 @@
 
 @stop
 @section('styles')
-    {{ Html::style('css/home.css') }}
+    {{ Html::style('css/news_detail.css') }}
 @stop
 @section('scripts')
 
@@ -24,8 +24,5 @@
     @include('frontend.00_common.slider')
 @stop
 @section('container')
-    @include('frontend.01_home.h_2')
-    @include('frontend.01_home.h_1')
-    @include('frontend.01_home.h_3')
-    @include('frontend.01_home.h_4')
+    @include('frontend.05_news_detail.n_d_1')
 @stop

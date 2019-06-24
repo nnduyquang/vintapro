@@ -32,3 +32,6 @@ mix.js('resources/assets/js/app.js', 'js/app.js')
 
 //SERVICE POST
     .sass('resources/assets/sass/frontend/service_post/service_post.scss', '../css/service_post.css').options({processCssUrls: false})
+
+//NEWS DETAIL
+    .sass('resources/assets/sass/frontend/news_detail/news_detail.scss', '../css/news_detail.css').options({processCssUrls: false})

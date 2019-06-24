@@ -1,0 +1,35 @@
+#n_d_1 h1.title {
+  color: #E52727;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  position: relative;
+  padding: 20px 0;
+}
+
+#n_d_1 h1.title:after {
+  position: absolute;
+  content: '';
+  width: 68px;
+  height: 2px;
+  background-color: #8AC12F;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) skew(45deg);
+          transform: translateX(-50%) skew(45deg);
+}
+
+#n_d_1 .content, #n_d_1 .contact-post {
+  text-align: justify;
+  line-height: 1.5;
+  padding: 0 0 20px 0;
+}
+
+#n_d_1 .content table, #n_d_1 .content th, #n_d_1 .content td, #n_d_1 .contact-post table, #n_d_1 .contact-post th, #n_d_1 .contact-post td {
+  border: 1px solid black;
+}
+
+#n_d_1 .content ul, #n_d_1 .contact-post ul {
+  padding: 0 0 0 20px;
+}

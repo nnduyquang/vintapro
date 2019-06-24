@@ -13,7 +13,9 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $data = [];
         $category = new Category();
+        $post = new Post();
         $data['h1_categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
+        $data['h4_news'] = $post->getAllPostByPostType(IS_POST, 3);
         return $data;
     }
 
@@ -70,7 +72,15 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $post = new Post();
         $data= $post->getPostDetailByPath($pathPost,CATEGORY_SERVICE);
-        $data['other'] = $post->getOtherPost($pathService, $data);
+        $data['other'] = $post->getOtherPost($pathService, $data, true);
+        return $data;
+    }
+
+    public function getNewsDetail($path)
+    {
+        $post = new Post();
+        $data = $post->getPostDetailByPath($path, CATEGORY_POST);
+        $data['other'] = $post->getOtherPost(null, $data, false);
         return $data;
     }
 

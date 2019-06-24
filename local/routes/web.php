@@ -13,6 +13,7 @@
 
 Route::get('/', 'FrontendController@getFrontend');
 Route::get('/dich-vu/{path}', 'FrontendController@getServiceDetail');
+Route::get('/tin-tuc/{path}', 'FrontendController@getNewsDetail');
 Route::get('/dich-vu/{pathService}/{pathPost}', 'FrontendController@getServicePost');
 
 Auth::routes();

@@ -1,0 +1,32 @@
+#n_d_1{
+  h1.title {
+    color: $main-color;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    position: relative;
+    padding: 20px 0;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 68px;
+      height: 2px;
+      background-color: $sub-color;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) skew(45deg);
+    }
+  }
+  .content,.contact-post{
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 0 20px 0;
+    table, th, td {
+      border: 1px solid black;
+    }
+    ul{
+      padding: 0 0 0 20px;
+    }
+  }
+}

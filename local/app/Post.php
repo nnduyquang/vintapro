@@ -71,16 +71,28 @@ class Post extends Model
         return $data;
     }
 
-    public function getOtherPost($pathService, $data)
+    public function getOtherPost($pathService, $data, $getByCategory = true)
     {
         $category = new Category();
-
+        if ($getByCategory) {
         $idCategory = $data['category']->id;
         $datas=$category->where('id', $idCategory)->first()->posts()->where('is_active', ACTIVE)->where('posts.id', '!=', $data['post']->id)->get();
-        foreach ($datas as $key=>$item){
-            $item->slug_category = $pathService;
+        }else{
+            $datas=$this->where('posts.id', '!=', $data['post']->id)->get();
         }
+        if (!is_null($pathService))
+            foreach ($datas as $key => $item) {
+                $item->slug_category = $pathService;
+            }
         return $datas;
+    }
+
+    public function getAllPostByPostType($postType, $take = 0)
+    {
+        if ($take != 0)
+            return $this->where('post_type', $postType)->take($take)->get();
+        else
+            return $this->where('post_type', $postType)->get();
     }
 
     protected static function boot()

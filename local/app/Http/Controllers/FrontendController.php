@@ -25,5 +25,9 @@ class FrontendController extends Controller
         $data = $this->frontendRepository->getServicePost($pathService,$pathPost);
         return view('frontend.03_service_post.index', compact('data'));
     }
+    public function getNewsDetail($path){
+        $data = $this->frontendRepository->getNewsDetail($path);
+        return view('frontend.05_news_detail.index', compact('data'));
+    }
 }
 
