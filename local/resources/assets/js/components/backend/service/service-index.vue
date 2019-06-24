@@ -19,6 +19,7 @@
                                 <th>ID</th>
                                 <th>Bài Viết</th>
                                 <th>Đường Dẫn</th>
+                                <th>Chuyên Mục</th>
                                 <th>Ngày Tạo</th>
                                 <th>Tình Trạng</th>
                                 <th>Hành Động</th>
@@ -28,6 +29,7 @@
                                 <td>{{post.id}}</td>
                                 <td>{{post.title}}</td>
                                 <td>{{post.slug}}</td>
+                                <td>{{post.listTitleCategory}}</td>
                                 <td>{{post.created_at | myDate}}</td>
                                 <td v-if="post.is_active==1"><i style="color:green;"
                                                                 class="fas fa-circle"></i>
@@ -64,12 +66,13 @@
                 showIndex:true,
                 posts: {},
                 editMode: false,
-                post_type:5
+                post_type:5,
+                category_type:2
             }
         },
         methods: {
             loadPosts() {
-                axios.get('api/post').then(({data}) => (this.posts = data));
+                axios.get('api/post',{params:this.axiosParams}).then(({data}) => (this.posts = data));
             },
             insertPost(){
                 this.showUpdate=true;
@@ -104,6 +107,14 @@
         },
         mounted() {
             console.log('Component mounted.')
+        },
+        computed: {
+            axiosParams() {
+                const params = new URLSearchParams();
+                params.append('post_type', this.post_type);
+                params.append('category_type', this.category_type);
+                return params;
+            }
         }
     }
 </script>

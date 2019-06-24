@@ -40,12 +40,45 @@ class Post extends Model
         return $parameters;
     }
 
-    public function getAllPost($post_type)
+    public function getAllPost($post_type,$category_type)
     {
+
         $datas = $this->where('post_type', $post_type)->orderBy('created_at', 'DESC')->with('seos')->get();
         foreach ($datas as $key => $item) {
-            $listCategory = $item->manaycategoryitems(0)->get()->implode('id', ',');
-            $item->listCategory = $listCategory;
+            $arrayCategory = $item->manaycategoryitems($category_type)->get();
+            $listIdCategory = $arrayCategory->implode(['id'], ',');
+            $listTitleCategory = $arrayCategory->implode(['title'], ',');
+            $item->listIdCategory = $listIdCategory;
+            $item->listTitleCategory = $listTitleCategory;
+        }
+        return $datas;
+    }
+
+    public function getPostByPathCategory($path)
+    {
+        $category = new Category();
+        $getCategory = $category->where('slug', $path)->first();
+        $data['category'] = $getCategory;
+        $data['posts'] = $getCategory->posts()->get();
+        return $data;
+    }
+
+    public function getPostDetailByPath($pathPost,$categoryType)
+    {
+        $data=[];
+        $data['post']=$this->where('slug', $pathPost)->first();
+        $data['category']=$data['post']->manaycategoryitems($categoryType)->first();
+        return $data;
+    }
+
+    public function getOtherPost($pathService, $data)
+    {
+        $category = new Category();
+
+        $idCategory = $data['category']->id;
+        $datas=$category->where('id', $idCategory)->first()->posts()->where('is_active', ACTIVE)->where('posts.id', '!=', $data['post']->id)->get();
+        foreach ($datas as $key=>$item){
+            $item->slug_category = $pathService;
         }
         return $datas;
     }

@@ -64,12 +64,13 @@
                 showIndex:true,
                 posts: {},
                 editMode: false,
-                post_type:0
+                post_type:0,
+                category_type:0
             }
         },
         methods: {
             loadPosts() {
-                axios.get('api/post').then(({data}) => (this.posts = data));
+                axios.get('api/post',{params:this.axiosParams}).then(({data}) => (this.posts = data));
             },
             insertPost(){
                 this.showUpdate=true;
@@ -104,6 +105,14 @@
         },
         mounted() {
             console.log('Component mounted.')
+        },
+        computed: {
+            axiosParams() {
+                const params = new URLSearchParams();
+                params.append('post_type', this.post_type);
+                params.append('category_type', this.category_type);
+                return params;
+            }
         }
     }
 </script>

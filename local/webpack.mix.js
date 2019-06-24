@@ -23,6 +23,12 @@ mix.js('resources/assets/js/app.js', 'js/app.js')
 //CSS FRONTEND
     //COMMON
     .sass('resources/assets/sass/frontend/common/common.scss', '../css/common.css').options({processCssUrls: false})
-//HOME
 
+//HOME
     .sass('resources/assets/sass/frontend/home/home.scss', '../css/home.css').options({processCssUrls: false})
+
+//SERVICE DETAIL
+    .sass('resources/assets/sass/frontend/service_detail/service_detail.scss', '../css/service_detail.css').options({processCssUrls: false})
+
+//SERVICE POST
+    .sass('resources/assets/sass/frontend/service_post/service_post.scss', '../css/service_post.css').options({processCssUrls: false})

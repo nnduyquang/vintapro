@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'FrontendController@getFrontend');
+Route::get('/dich-vu/{path}', 'FrontendController@getServiceDetail');
+Route::get('/dich-vu/{pathService}/{pathPost}', 'FrontendController@getServicePost');
 
 Auth::routes();
 //Route::get('/login', 'AuthController@checklogin');

@@ -5,6 +5,7 @@ namespace App\Repositories\Frontend;
 
 use App\Category;
 use App\Config;
+use App\Post;
 
 class FrontendRepository implements FrontendRepositoryInterface
 {
@@ -21,8 +22,7 @@ class FrontendRepository implements FrontendRepositoryInterface
     {
         $data = [];
         $config = new Config();
-        $dataConfig = $config->getConfigByListName(['config_phone', '	
-config_describe_contact', 'config_hotline_show', 'config_hotline_call', 'config_info_email', 'config_title', 'config_address', 'config_logo', 'config_script_header', 'config_script_body', 'config_slider', 'seo_title', 'seo_description', 'seo_image', 'config_descrtiption']);
+        $dataConfig = $config->getConfigByListName(['config_phone', 'config_describe_contact', 'config_hotline_show', 'config_hotline_call', 'config_info_email', 'config_title', 'config_address', 'config_logo', 'config_script_header', 'config_script_body', 'config_slider', 'seo_title', 'seo_description', 'seo_image', 'config_descrtiption']);
         foreach ($dataConfig as $key => $item) {
             if ($item->name == 'config_phone')
                 $data['config_phone'] = $item->content;
@@ -54,7 +54,23 @@ config_describe_contact', 'config_hotline_show', 'config_hotline_call', 'config_
                 $data['seo_image'] = $item->content;
             if ($item->name == 'config_slider')
                 $data['config_slider'] = $item->content;
+            if ($item->name == 'config_describe_contact')
+                $data['config_describe_contact'] = $item->content;
         }
+        return $data;
+    }
+
+    public function getServiceDetail($path)
+    {
+        $post = new Post();
+        return $post->getPostByPathCategory($path);
+    }
+
+    public function getServicePost($pathService, $pathPost)
+    {
+        $post = new Post();
+        $data= $post->getPostDetailByPath($pathPost,CATEGORY_SERVICE);
+        $data['other'] = $post->getOtherPost($pathService, $data);
         return $data;
     }
 

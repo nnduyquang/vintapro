@@ -1,0 +1,62 @@
+#sv_p_1 {
+  .breadcrumb-wrap {
+    padding: 20px 0 20px 0;
+    background-color: rgba(198, 200, 202, 0.21);
+    ul {
+      li {
+        display: inline-block;
+        a {
+          font-weight: bold;
+        }
+        &:nth-child(1) {
+          a {
+            color: $main-color;
+          }
+        }
+        &:nth-child(2) {
+          position: relative;
+          a {
+            padding: 0 10px;
+            color: #484848;
+            transition: all 0.3s;
+            &:hover {
+              color: $sub-color;
+            }
+          }
+          &:before, &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f101";
+          }
+        }
+      }
+    }
+  }
+  h1.title {
+    color: $main-color;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    position: relative;
+    padding: 20px 0;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 68px;
+      height: 2px;
+      background-color: $sub-color;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) skew(45deg);
+    }
+  }
+  .content,.contact-post{
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 0 20px 0;
+    ul{
+      padding: 0 0 0 20px;
+    }
+  }
+}

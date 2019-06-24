@@ -9,4 +9,8 @@ interface FrontendRepositoryInterface
 
     public function getFrontendCommon();
 
+    public function getServiceDetail($path);
+
+    public function getServicePost($pathService,$pathPost);
+
 }

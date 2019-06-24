@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-between align-items-center">
                     <ul>
-                        <li><a href="#">Trang Chủ</a></li>
+                        <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
                         <li><a href="#">Giới Thiệu</a></li>
                         <li><a href="#">Dịch Vụ</a></li>
                         <li><a href="#">Liên Hệ</a></li>

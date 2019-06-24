@@ -270,7 +270,7 @@
             Fire.$on('UpdatePost', ($content) => {
                 console.log($content);
                 this.form.fill($content);
-                this.form.list_id_category=$content.listCategory.split(',');
+                this.form.list_id_category=$content.listIdCategory.split(',');
                 this.form.seo_title=$content.seos.seo_title;
                 this.form.seo_keyword=$content.seos.seo_keyword;
                 this.form.seo_description=$content.seos.seo_description;

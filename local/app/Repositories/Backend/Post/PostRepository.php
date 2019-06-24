@@ -15,7 +15,7 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
 
     public function index($request)
     {
-        return $this->_model->getAllPost($request->post_type);
+        return $this->_model->getAllPost($request->post_type,$request->category_type);
     }
 
     public function storePost($request)
@@ -33,10 +33,19 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
         $result = $this->_model->create($parameters->all());
         if ($parameters->post_type == IS_POST) {
             $attachData = array();
+
             foreach ($parameters['list_id_category'] as $key => $item) {
                 $attachData[$item] = array('type' => CATEGORY_POST);
             }
             $result->manaycategoryitems(CATEGORY_POST)->attach($attachData);
+        }
+        if ($parameters->post_type == IS_SERVICE_TABLE) {
+            $attachData = array();
+
+            foreach ($parameters['list_id_category'] as $key => $item) {
+                $attachData[$item] = array('type' => CATEGORY_SERVICE);
+            }
+            $result->manaycategoryitems(CATEGORY_SERVICE)->attach($attachData);
         }
     }
 
@@ -66,6 +75,13 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
                 $syncData[$item] = array('type' => CATEGORY_POST);
             }
             $result->manaycategoryitems(CATEGORY_POST)->sync($syncData);
+        }
+        if ($parameters->post_type == IS_SERVICE_TABLE) {
+            $syncData = array();
+            foreach ($parameters['list_id_category'] as $key => $item) {
+                $syncData[$item] = array('type' => CATEGORY_SERVICE);
+            }
+            $result->manaycategoryitems(CATEGORY_SERVICE)->sync($syncData);
         }
     }
 

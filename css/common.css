@@ -6064,6 +6064,7 @@ readers do not read off random characters that represent icons */
   -webkit-transition: .6s;
   transition: .6s;
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 #menu_desktop .on-bottom ul li a:hover {
