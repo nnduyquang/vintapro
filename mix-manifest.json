@@ -7,6 +7,9 @@
     "/ss/service_detail.css": "/ss/service_detail.css",
     "/ss/service_post.css": "/ss/service_post.css",
     "/ss/news_detail.css": "/ss/news_detail.css",
+    "/ss/contact.css": "/ss/contact.css",
+    "/ss/page.css": "/ss/page.css",
+    "/s/soft.js": "/s/soft.js",
     "/s/core.common.js": "/s/core.common.js",
     "/s/backend.js": "/s/backend.js",
     "/s/module.common.js": "/s/module.common.js"

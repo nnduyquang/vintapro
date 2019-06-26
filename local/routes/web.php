@@ -14,13 +14,18 @@
 Route::get('/', 'FrontendController@getFrontend');
 Route::get('/dich-vu/{path}', 'FrontendController@getServiceDetail');
 Route::get('/tin-tuc/{path}', 'FrontendController@getNewsDetail');
+Route::get('/trang/{path}', 'FrontendController@getPageDetail');
 Route::get('/dich-vu/{pathService}/{pathPost}', 'FrontendController@getServicePost');
+Route::get('/lien-he', function () {
+    return view('frontend.06_contact.index');
+});
 
 Auth::routes();
 //Route::get('/login', 'AuthController@checklogin');
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::post('login', 'AuthController@login')->name('login');
 //Route::get('logout', 'AuthController@logout')->name('logout');
+Route::post('sendmail/send', ['as' => 'mail.sendmail', 'uses' => 'MailController@sendMail']);
 Route::group(['middleware' => ['auth']], function () {
     Route::get('dashboard', function () {
         return view('backend.admin.dashboard.index');
@@ -43,6 +48,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('product', function () {
         return view('backend.admin.product.index');
     })->name('product');
+    Route::get('page', function () {
+        return view('backend.admin.page.index');
+    })->name('page');
     Route::get('config', function () {
         return view('backend.admin.config.index');
     })->name('config');

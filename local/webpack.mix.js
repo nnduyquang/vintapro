@@ -14,6 +14,7 @@ mix.setResourceRoot('../');
  */
 
 mix.js('resources/assets/js/app.js', 'js/app.js')
+    .js('resources/assets/js/soft.js', 'js/soft.js')
     .styles('resources/assets/js/backend.js', '../js/backend.js')
     .js('resources/assets/js/core.common.js', '../js/core.common.js')
     .styles('resources/assets/js/module.common.js', '../js/module.common.js')
@@ -35,3 +36,9 @@ mix.js('resources/assets/js/app.js', 'js/app.js')
 
 //NEWS DETAIL
     .sass('resources/assets/sass/frontend/news_detail/news_detail.scss', '../css/news_detail.css').options({processCssUrls: false})
+
+//CONTACT
+    .sass('resources/assets/sass/frontend/contact/contact.scss', '../css/contact.css').options({processCssUrls: false})
+
+//PAGE
+    .sass('resources/assets/sass/frontend/page/page.scss', '../css/page.css').options({processCssUrls: false})

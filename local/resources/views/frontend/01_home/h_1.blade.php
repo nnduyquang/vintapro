@@ -1,9 +1,9 @@
 <div id="h_1">
     <h5>các dịch vụ của <span>chúng tôi</span></h5>
     <div class="container">
-        <div class="row row-flex">
+        <div class="row">
             @foreach($data['h1_categories'] as $key=>$item)
-            <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
                 <div class="one-item">
                     <a href="{{URL::to('dich-vu/'.$item->slug)}}">
                         <div class="img-service">

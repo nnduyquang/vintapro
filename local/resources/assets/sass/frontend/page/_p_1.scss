@@ -1,0 +1,104 @@
+#p_1{
+  h1.title {
+    color: $main-color;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    position: relative;
+    padding: 20px 0;
+    //&:after {
+    //  position: absolute;
+    //  content: '';
+    //  width: 68px;
+    //  height: 2px;
+    //  background-color: $sub-color;
+    //  bottom: -10px;
+    //  left: 50%;
+    //  transform: translateX(-50%) skew(45deg);
+    //}
+  }
+  .info {
+    .title {
+      padding: 20px 0;
+      margin-bottom: 32px;
+      h1 {
+        color: $main-color;
+        font-size: 22px;
+        text-align: left;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: .5em;
+      }
+      span {
+        color: #a9a9a9;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+    .content, .contact-post {
+      text-align: justify;
+      line-height: 1.5;
+      padding: 0 0 20px 0;
+      table, th, td {
+        border: 1px solid black;
+      }
+      ul {
+        padding: 0 0 0 20px;
+      }
+    }
+  }
+  .sidebar-right {
+    border-left: 1px solid #ececec;
+    .sidebar-one-item {
+      margin-bottom: 20px;
+      h3.sidebar-title {
+        text-transform: uppercase;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          width: 68px;
+          height: 2px;
+          background-color: $sub-color;
+          bottom: -10px;
+          left: 0;
+        }
+      }
+      ul {
+        list-style: none;
+        line-height: 1.5;
+        margin-top: 1.66em;
+        li {
+          margin-bottom: 20px;
+          border-bottom: 1px solid #ececec;
+          padding-bottom: 10px;
+          a {
+            color: #545454;
+            text-transform: none;
+            font-size: 13px;
+            line-height: 1.6;
+            transition: .6s;
+            font-weight: bold;
+            .img-post {
+              width: 100%;
+              height: 48px;
+              overflow: hidden;
+              .img-link {
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: .6s;
+              }
+            }
+            &:hover{
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

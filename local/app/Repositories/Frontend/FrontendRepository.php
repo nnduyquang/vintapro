@@ -15,7 +15,10 @@ class FrontendRepository implements FrontendRepositoryInterface
         $category = new Category();
         $post = new Post();
         $data['h1_categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
+        $data['h2_introduce'] = $post->getPostDetailByPath('gioi-thieu', null)['post'];
+
         $data['h4_news'] = $post->getAllPostByPostType(IS_POST, 3);
+
         return $data;
     }
 
@@ -71,16 +74,30 @@ class FrontendRepository implements FrontendRepositoryInterface
     public function getServicePost($pathService, $pathPost)
     {
         $post = new Post();
-        $data= $post->getPostDetailByPath($pathPost,CATEGORY_SERVICE);
+        $category = new Category();
+        $data = $post->getPostDetailByPath($pathPost, CATEGORY_SERVICE);
         $data['other'] = $post->getOtherPost($pathService, $data, true);
+        $data['pathService'] = $pathService;
+        $data['categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
         return $data;
     }
 
     public function getNewsDetail($path)
     {
         $post = new Post();
+        $category = new Category();
         $data = $post->getPostDetailByPath($path, CATEGORY_POST);
-        $data['other'] = $post->getOtherPost(null, $data, false);
+        $data['other'] = $post->getOtherPost(null, $data);
+        $data['categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
+        return $data;
+    }
+
+    public function getPageDetail($path)
+    {
+        $post = new Post();
+        $category = new Category();
+        $data = $post->getPostDetailByPath($path, null);
+        $data['categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
         return $data;
     }
 

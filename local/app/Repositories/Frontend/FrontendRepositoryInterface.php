@@ -15,4 +15,6 @@ interface FrontendRepositoryInterface
 
     public function getNewsDetail($path);
 
+    public function getPageDetail($path);
+
 }

@@ -151,6 +151,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a  href="{{route('page')}}" class="nav-link {{ set_active('page') }}">
+                            <i class="nav-icon fas fa-file-alt"></i>
+                            <p>
+                                Quản Lý Trang
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a  href="{{route('post')}}" class="nav-link {{ set_active('post') }}">
                             <i class="nav-icon fas fa-newspaper"></i>
                             <p>
@@ -160,7 +168,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li>
                     <li class="nav-item">
                         <a  href="{{route('service')}}" class="nav-link {{ set_active('service') }}">
-                            <i class="nav-icon fas fa-newspaper"></i>
+                            <i class="nav-icon fas fa-list"></i>
                             <p>
                                 Quản Lý Dịch Vụ
                             </p>

@@ -48,9 +48,10 @@
                 <div class="col-md-12 d-flex justify-content-between align-items-center">
                     <ul>
                         <li><a href="{{URL::to('/')}}">Trang Chủ</a></li>
-                        <li><a href="#">Giới Thiệu</a></li>
-                        <li><a href="#">Dịch Vụ</a></li>
-                        <li><a href="#">Liên Hệ</a></li>
+                        <li><a href="{{URL::to('trang/gioi-thieu')}}">Giới Thiệu</a></li>
+                        <li><a href="{{URL::to('dich-vu')}}">Dịch Vụ</a></li>
+                        <li><a href="{{URL::to('tin-tuc')}}">Tin Tức</a></li>
+                        <li><a href="{{URL::to('lien-he')}}">Liên Hệ</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,73 @@
+#c_1 .contact_top {
+  line-height: 1.5 !important;
+}
+
+#c_1 .contact_top h3.title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  color: #E52727;
+  text-transform: uppercase;
+}
+
+#c_1 .contact_top p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#c_1 .contact_top h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#c_1 .contact_top ul {
+  list-style: none;
+}
+
+#c_1 .contact_top ul li {
+  font-weight: bold;
+}
+
+#c_1 .contact_top ul li i {
+  margin-right: 10px;
+  color: #E52727;
+}
+
+#c_1 .contact_top ul li span {
+  font-weight: bold;
+}
+
+#c_1 .contact_bottom .input-group {
+  margin-bottom: 20px;
+}
+
+#c_1 .contact_bottom .input-group input, #c_1 .contact_bottom .input-group textarea {
+  border-radius: inherit;
+}
+
+#c_1 .contact_bottom button {
+  border-radius: inherit;
+  background-color: #E52727;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+#c_1 .contact_bottom button:hover {
+  background-color: #8AC12F;
+}
+
+#c_1 .contact_bottom button .successSending, #c_1 .contact_bottom button .loadingSending {
+  margin-left: 5px;
+}
+
+@media (max-width: 575.98px) {
+  #cont1 .contact_top {
+    margin-top: 20px;
+  }
+  #cont1 .contact_bottom .button-group {
+    text-align: center;
+  }
+}

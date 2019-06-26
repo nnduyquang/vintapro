@@ -110,7 +110,7 @@
             axiosParams() {
                 const params = new URLSearchParams();
                 params.append('post_type', this.post_type);
-                params.append('category_type', this.category_type);
+                params.append('category_type', '');
                 return params;
             }
         }

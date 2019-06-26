@@ -26,6 +26,7 @@
 <body>
 @include('frontend.00_common.menu.menu_desktop')
 @include('frontend.00_common.menu.menu_mobile')
+@include('frontend.00_common.menu.menu_tabbar')
 @yield('slider')
 
 @yield('container')

@@ -29,5 +29,16 @@ class FrontendController extends Controller
         $data = $this->frontendRepository->getNewsDetail($path);
         return view('frontend.05_news_detail.index', compact('data'));
     }
+    public function getPageDetail($path){
+        $data = $this->frontendRepository->getPageDetail($path);
+        switch ($path){
+            case 'gioi-thieu':
+                return view('frontend.07_page.index', compact('data'));
+                break;
+            default:
+                return view('frontend.99_404.index', compact('data'));
+        }
+
+    }
 }
 

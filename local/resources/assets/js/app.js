@@ -72,6 +72,10 @@ Vue.component(
     require('./components/backend/product/insert-update-product.vue')
 );
 Vue.component(
+    'insert-update-page',
+    require('./components/backend/page/insert-update-page.vue')
+);
+Vue.component(
     'insert-update-service',
     require('./components/backend/service/insert-update-service.vue')
 );
@@ -115,6 +119,10 @@ Vue.component(
 Vue.component(
     'service-index',
     require('./components/backend/service/service-index.vue')
+);
+Vue.component(
+    'page-index',
+    require('./components/backend/page/page-index.vue')
 );
 
 
