@@ -126,12 +126,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <p>Dịch Vụ</p>
                                 </a>
                             </li>
-                            <li class="pl-5 nav-item">
-                                <a href="{{route('category-product')}}" class="nav-link {{ set_active('category-product')}}">
-                                    <i class="fas fa-boxes nav-icon"></i>
-                                    <p>Sản Phẩm</p>
-                                </a>
-                            </li>
+                            {{--<li class="pl-5 nav-item">--}}
+                                {{--<a href="{{route('category-product')}}" class="nav-link {{ set_active('category-product')}}">--}}
+                                    {{--<i class="fas fa-boxes nav-icon"></i>--}}
+                                    {{--<p>Sản Phẩm</p>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
                         </ul>
                     </li>
                     {{--<li class="nav-item">--}}

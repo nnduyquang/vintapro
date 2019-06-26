@@ -23,10 +23,10 @@
                 <span>Liên kết</span>
                 <div class="is-divider small"></div>
                 <ul>
-                    <li><i class="fas fa-angle-double-right"></i><a href="#">Chụp Ảnh Cưới</a></li>
-                    <li><i class="fas fa-angle-double-right"></i><a href="#">Chụp Phóng Sự Cưới</a></li>
-                    <li><i class="fas fa-angle-double-right"></i><a href="#">Chụp Ảnh Gia Đình</a></li>
-                    <li><i class="fas fa-angle-double-right"></i><a href="#">Book Lịch</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="{{URL::to('trang/gioi-thieu')}}">Giới Thiệu</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="{{URL::to('dich-vu')}}">Dịch Vụ</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="{{URL::to('tin-tuc')}}">Tin Tức</a></li>
+                    <li><i class="fas fa-angle-double-right"></i><a href="{{URL::to('lien-he')}}">Liên Hệ</a></li>
                 </ul>
             </div>
             <div class="col-md-3">

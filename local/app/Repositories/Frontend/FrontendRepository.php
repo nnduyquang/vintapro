@@ -102,7 +102,10 @@ class FrontendRepository implements FrontendRepositoryInterface
     }
 
     public function getServicePage(){
-        
+        $data = [];
+        $category = new Category();
+        $data['h1_categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
+        return $data;
     }
 
 

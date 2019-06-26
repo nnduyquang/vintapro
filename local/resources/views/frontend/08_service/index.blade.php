@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-    {{$data['post']->title}}
+    Dịch Vụ
 @stop
 @section('description')
-    {{loai_bo_html_tag($data['post']->description)}}
+
 @stop
 @section('keyword')
 
