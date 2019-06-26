@@ -40,5 +40,9 @@ class FrontendController extends Controller
         }
 
     }
+    public function getServicePage(){
+        $data = $this->frontendRepository->getServicePage();
+        return view('frontend.08_service.index', compact('data'));
+    }
 }
 

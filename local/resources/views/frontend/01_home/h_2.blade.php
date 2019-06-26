@@ -17,24 +17,15 @@
             </div>
             <div class="col-md-6 image-content">
                 <div class="row">
+                    @php
+                        $subImage=json_decode($data['h2_introduce']->img_sub_list);
+                    @endphp
+                    @foreach($subImage as $key=>$item)
                     <div class="col-md-4 p-0">
-                        <img src="https://ketoanuytin.com/images/aboutus/accounting_1.jpg" alt="">
+                        <img src="{{URL::to($item->path)}}" alt="">
                     </div>
-                    <div class="col-md-4 p-0">
-                        <img src="https://ketoanuytin.com/images/aboutus/accounting_1.jpg" alt="">
-                    </div>
-                    <div class="col-md-4 p-0">
-                        <img src="https://ketoanuytin.com/images/aboutus/accounting_1.jpg" alt="">
-                    </div>
-                    <div class="col-md-4 p-0">
-                        <img src="https://ketoanuytin.com/images/aboutus/accounting_1.jpg" alt="">
-                    </div>
-                    <div class="col-md-4 p-0">
-                        <img src="https://ketoanuytin.com/images/aboutus/accounting_1.jpg" alt="">
-                    </div>
-                    <div class="col-md-4 p-0">
-                        <img src="https://ketoanuytin.com/images/aboutus/accounting_1.jpg" alt="">
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>

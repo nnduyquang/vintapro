@@ -16,6 +16,8 @@ Route::get('/dich-vu/{path}', 'FrontendController@getServiceDetail');
 Route::get('/tin-tuc/{path}', 'FrontendController@getNewsDetail');
 Route::get('/trang/{path}', 'FrontendController@getPageDetail');
 Route::get('/dich-vu/{pathService}/{pathPost}', 'FrontendController@getServicePost');
+Route::get('/dich-vu/', 'FrontendController@getServicePage');
+Route::get('/tin-tuc/', 'FrontendController@getNewsPage');
 Route::get('/lien-he', function () {
     return view('frontend.06_contact.index');
 });

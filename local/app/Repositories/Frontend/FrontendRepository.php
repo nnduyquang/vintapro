@@ -101,5 +101,9 @@ class FrontendRepository implements FrontendRepositoryInterface
         return $data;
     }
 
+    public function getServicePage(){
+        
+    }
+
 
 }

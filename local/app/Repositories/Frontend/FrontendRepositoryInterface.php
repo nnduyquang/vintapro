@@ -11,10 +11,12 @@ interface FrontendRepositoryInterface
 
     public function getServiceDetail($path);
 
-    public function getServicePost($pathService,$pathPost);
+    public function getServicePost($pathService, $pathPost);
 
     public function getNewsDetail($path);
 
     public function getPageDetail($path);
+
+    public function getServicePage();
 
 }

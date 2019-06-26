@@ -21,6 +21,7 @@ class PostRepository extends EloquentRepository implements PostRepositoryInterfa
     public function storePost($request)
     {
         $parameters = $this->_model->prepareParameters($request);
+
         $seo = new Seo();
         if (!$seo->isSeoParameterEmpty($request)) {
             $paramSeo=$seo->prepareParameters($request);

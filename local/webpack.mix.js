@@ -42,3 +42,6 @@ mix.js('resources/assets/js/app.js', 'js/app.js')
 
 //PAGE
     .sass('resources/assets/sass/frontend/page/page.scss', '../css/page.css').options({processCssUrls: false})
+
+//SERVICE
+    .sass('resources/assets/sass/frontend/service/service.scss', '../css/service.css').options({processCssUrls: false})

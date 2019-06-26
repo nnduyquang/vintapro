@@ -78532,6 +78532,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -78555,6 +78560,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 content: '',
                 is_active: 0,
                 img_primary: '',
+                img_sub_list: '',
                 post_type: 1,
                 list_id_category: '0'
             })
@@ -78662,6 +78668,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         Fire.$on('UpdateActive', function ($content) {
             _this3.form.is_active = $content;
         });
+        Fire.$on('InsertListImage', function ($content) {
+            var arrayImageList = [];
+            $.each($content, function (key, value) {
+                arrayImageList.push(value.obj_image);
+            });
+            if (arrayImageList.length == 0) {
+                _this3.form.img_sub_list = '';
+            } else {
+                _this3.form.img_sub_list = arrayImageList;
+            }
+        });
 
         Fire.$on('UpdatePost', function ($content) {
             _this3.form.fill($content);
@@ -78672,6 +78689,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 $('input[name=is_active]').prop('checked', false).change();
             }
             Fire.$emit('UpdateTextarea', { data: $content.content, id: 'content-post' });
+            Fire.$emit('UpdateListImage', $content.img_sub_list);
             // Fire.$emit('UpdateSeo',$content.seos);
         });
         Fire.$on('DeletePost', function ($content) {
@@ -79057,6 +79075,15 @@ var render = function() {
               ])
             ])
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            { staticClass: "col-md-12" },
+            [_c("multi-image", { attrs: { form: _vm.form } })],
+            1
+          )
         ])
       ]
     )

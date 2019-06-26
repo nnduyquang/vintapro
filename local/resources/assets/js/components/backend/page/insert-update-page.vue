@@ -90,6 +90,11 @@
 
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <multi-image :form="form"></multi-image>
+                </div>
+            </div>
         </form>
     </div>
 </template>
@@ -117,6 +122,7 @@
                     content: '',
                     is_active: 0,
                     img_primary: '',
+                    img_sub_list: '',
                     post_type: 1,
                     list_id_category: '0',
                 }),
@@ -226,6 +232,17 @@
             Fire.$on('UpdateActive', ($content) => {
                 this.form.is_active = $content
             });
+            Fire.$on('InsertListImage', ($content) => {
+                let arrayImageList = [];
+                $.each($content, function (key, value) {
+                    arrayImageList.push(value.obj_image)
+                });
+                if (arrayImageList.length == 0) {
+                    this.form.img_sub_list = '';
+                } else {
+                    this.form.img_sub_list = arrayImageList;
+                }
+            });
 
 
             Fire.$on('UpdatePost', ($content) => {
@@ -237,6 +254,7 @@
                     $('input[name=is_active]').prop('checked', false).change();
                 }
                 Fire.$emit('UpdateTextarea',{data:$content.content,id:'content-post'});
+                Fire.$emit('UpdateListImage', $content.img_sub_list);
                 // Fire.$emit('UpdateSeo',$content.seos);
 
             });
