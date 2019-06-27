@@ -19,4 +19,6 @@ interface FrontendRepositoryInterface
 
     public function getServicePage();
 
+    public function getNewsPage();
+
 }

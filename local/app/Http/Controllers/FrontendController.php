@@ -44,5 +44,10 @@ class FrontendController extends Controller
         $data = $this->frontendRepository->getServicePage();
         return view('frontend.08_service.index', compact('data'));
     }
+    public function getNewsPage(){
+
+        $data = $this->frontendRepository->getNewsPage();
+        return view('frontend.04_news.index', compact('data'));
+    }
 }
 

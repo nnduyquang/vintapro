@@ -21,7 +21,7 @@
                         $subImage=json_decode($data['h2_introduce']->img_sub_list);
                     @endphp
                     @foreach($subImage as $key=>$item)
-                    <div class="col-md-4 p-0">
+                    <div class="col-md-4 col-6 p-0">
                         <img src="{{URL::to($item->path)}}" alt="">
                     </div>
                     @endforeach

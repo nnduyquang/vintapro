@@ -87,7 +87,7 @@ class Post extends Model
     public function getPostDetailByPath($pathPost, $categoryType = null)
     {
         $data = [];
-        $data['post'] = $this->where('slug', $pathPost)->first();
+        $data['post'] = $this->where('slug', $pathPost)->with('seos')->first();
         if (!is_null($categoryType)) {
             $data['category'] = $data['post']->manaycategoryitems($categoryType)->first();
         }

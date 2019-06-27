@@ -45,7 +45,6 @@
   width: 100%;
   height: 176px;
   overflow: hidden;
-  padding: 5px;
   padding: 20px 0 20px 20px;
 }
 
@@ -72,4 +71,16 @@
   color: #565656;
   text-align: justify;
   padding: 0 18px 20px 0;
+}
+
+@media (max-width: 575.98px) {
+  #sv_d_1 .group-info .one-item .img-post {
+    padding: 5px;
+  }
+  #sv_d_1 .group-info .one-item .description {
+    padding: 5px;
+  }
+  #sv_d_1 .group-info .one-item h3 {
+    text-align: center;
+  }
 }

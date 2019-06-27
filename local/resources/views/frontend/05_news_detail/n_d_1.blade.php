@@ -24,14 +24,14 @@
                         @foreach($data['other'] as $key=>$item)
                             <li><a href="{{URL::to('tin-tuc/'.$item->slug)}}">
                                     <div class="row">
-                                        <div class="col-md-4 pr-0">
+                                        <div class="col-md-4 col-4 pr-0">
                                             <div class="img-post">
                                                 <div class="img-link"
                                                      style="background-image:url({{URL::to($item->img_primary)}});">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 pr-0">
+                                        <div class="col-md-8 col-8 pr-0">
                                             {{$item->title}}
                                         </div>
                                     </div>

@@ -107,6 +107,15 @@ class FrontendRepository implements FrontendRepositoryInterface
         $data['h1_categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
         return $data;
     }
+    public function getNewsPage(){
+
+        $data = [];
+        $post = new Post();
+        $category = new Category();
+        $data['posts']  = $post->getAllPostByPostType(IS_POST);
+        $data['categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
+        return $data;
+    }
 
 
 }

@@ -1,18 +1,18 @@
 @extends('frontend.master')
 @section('title')
-    {{$data['post']->title}}
+    {{$data['post']->seos->seo_title}}
 @stop
 @section('description')
-    {{loai_bo_html_tag($data['post']->description)}}
+    {{loai_bo_html_tag($data['post']->seos->seo_description)}}
 @stop
 @section('keyword')
-
+    {{$data['post']->seos->seo_keyword}}
 @stop
 @section('url-og')
 
 @stop
 @section('image-og')
-
+    {{URL::to($data['post']->seos->seo_image)}}
 @stop
 @section('styles')
     {{ Html::style('css/service_post.css') }}

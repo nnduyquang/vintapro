@@ -1,9 +1,9 @@
 @extends('frontend.master')
 @section('title')
-
+{{$data['category']->title}}
 @stop
 @section('description')
-
+{{$data['category']->description}}
 @stop
 @section('keyword')
 

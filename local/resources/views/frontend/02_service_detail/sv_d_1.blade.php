@@ -15,7 +15,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-8 pl-0">
+                                    <div class="col-md-8 pl-md-0">
                                         <h3>{{$item->title}}</h3>
                                         <div class="description">
                                             {{$item->description}}
