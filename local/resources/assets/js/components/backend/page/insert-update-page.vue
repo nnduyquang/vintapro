@@ -246,7 +246,20 @@
 
 
             Fire.$on('UpdatePost', ($content) => {
+                console.log('haha');
                 this.form.fill($content);
+                let list = [];
+                $.each(JSON.parse($content.img_sub_list), function (key, value) {
+                    let obj_image = JSON.stringify({
+                        path: value.path,
+                        name: value.name,
+                        width: value.width,
+                        height: value.height
+                    });
+                    list.push(obj_image);
+                });
+
+                this.form.img_sub_list = list;
                 this.form.list_id_category='0';
                 if($content.is_active==1){
                     $('input[name=is_active]').prop('checked', true).change();

@@ -78683,7 +78683,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
 
         Fire.$on('UpdatePost', function ($content) {
+            console.log('haha');
             _this3.form.fill($content);
+            var list = [];
+            $.each(JSON.parse($content.img_sub_list), function (key, value) {
+                var obj_image = JSON.stringify({
+                    path: value.path,
+                    name: value.name,
+                    width: value.width,
+                    height: value.height
+                });
+                list.push(obj_image);
+            });
+
+            _this3.form.img_sub_list = list;
             _this3.form.list_id_category = '0';
             if ($content.is_active == 1) {
                 $('input[name=is_active]').prop('checked', true).change();
