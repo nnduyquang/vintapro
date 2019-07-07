@@ -14,5 +14,8 @@
     "/s/soft.js": "/s/soft.js",
     "/s/core.common.js": "/s/core.common.js",
     "/s/backend.js": "/s/backend.js",
-    "/s/module.common.js": "/s/module.common.js"
+    "/s/module.common.js": "/s/module.common.js",
+    "/s/core.home.js": "/s/core.home.js",
+    "/s/home.js": "/s/home.js",
+    "/ss/core.home.css": "/ss/core.home.css"
 }

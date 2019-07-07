@@ -16,7 +16,7 @@ class FrontendRepository implements FrontendRepositoryInterface
         $post = new Post();
         $data['h1_categories'] = $category->getFirstParentCategoriesByType(CATEGORY_SERVICE);
         $data['h2_introduce'] = $post->getPostDetailByPath('gioi-thieu', null)['post'];
-
+        $data['h5_partner'] = $post->getAllPostByPostType(IS_PARTNER);
         $data['h4_news'] = $post->getAllPostByPostType(IS_POST, 3);
 
         return $data;

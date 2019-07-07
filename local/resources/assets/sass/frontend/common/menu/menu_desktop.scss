@@ -14,6 +14,7 @@
       padding: 20px 10px 20px 0;
     }
     .slogan{
+      text-align: center;
       p{
         width: 300px;
         font-size: 18px;
@@ -21,6 +22,9 @@
         color: $sub-color;
         font-weight: bold;
         text-transform: uppercase;
+      }
+      p.description{
+        font-size: 16px;
       }
     }
     .address{

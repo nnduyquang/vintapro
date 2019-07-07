@@ -6,6 +6,7 @@ define("CATEGORY_SERVICE",2);
 
 define("IS_POST",0);
 define("IS_PAGE",1);
+define("IS_PARTNER",3);
 define("IS_SERVICE_TABLE",5);
 define("ACTIVE",1);
 

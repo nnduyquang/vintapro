@@ -38,7 +38,7 @@ class Category extends Model
         return $newArray;
     }
     public function getFirstParentCategoriesByType($type){
-        return $categories = $this->where('type', $type)->where('parent_id', NULL)->orderBy('order')->get();
+        return $categories = $this->where('type', $type)->where('parent_id', NULL)->where('is_active',ACTIVE)->orderBy('order')->get();
     }
 
     public function getChildren($childrens, &$newArray)

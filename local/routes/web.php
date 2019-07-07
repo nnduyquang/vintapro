@@ -53,6 +53,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('page', function () {
         return view('backend.admin.page.index');
     })->name('page');
+    Route::get('partner', function () {
+        return view('backend.admin.partner.index');
+    })->name('partner');
     Route::get('config', function () {
         return view('backend.admin.config.index');
     })->name('config');

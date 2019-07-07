@@ -50,6 +50,10 @@ Vue.component(
     'product-index',
     require('./components/backend/product/product-index.vue')
 );
+Vue.component(
+    'partner-index',
+    require('./components/backend/partner/partner-index.vue')
+);
 
 Vue.component(
     'text-area',
@@ -78,6 +82,10 @@ Vue.component(
 Vue.component(
     'insert-update-service',
     require('./components/backend/service/insert-update-service.vue')
+);
+Vue.component(
+    'insert-update-partner',
+    require('./components/backend/partner/insert-update-partner.vue')
 );
 Vue.component(
     'tree-view-category',

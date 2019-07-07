@@ -1,5 +1,5 @@
 <div id="h_4">
-    <h5>Tin Tức <span>kế toán</span></h5>
+    <h5>Tin Tức  <span>kế toán</span></h5>
     <div class="container">
         <div class="row">
             @foreach($data['h4_news'] as $key=>$item)

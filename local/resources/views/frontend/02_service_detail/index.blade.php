@@ -21,7 +21,7 @@
 
 @stop
 @section('slider')
-    @include('frontend.00_common.slider')
+    {{--@include('frontend.00_common.slider')--}}
 @stop
 @section('container')
     @include('frontend.02_service_detail.sv_d_1')

@@ -174,6 +174,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a  href="{{route('partner')}}" class="nav-link {{ set_active('partner') }}">
+                            <i class="nav-icon fas fa-handshake"></i>
+                            <p>
+                                Quản Lý Đối Tác
+                            </p>
+                        </a>
+                    </li>
                     {{--<li class="nav-item">--}}
                         {{--<a  href="{{route('product')}}" class="nav-link {{ set_active('product') }}">--}}
                             {{--<i class="nav-icon fas fa-cubes"></i>--}}

@@ -25,6 +25,7 @@
                         <img src="{{URL::to($listFrontendCommon['config_logo'])}}" alt="">
                         <div class="slogan" style="color: #055f93">
                             <p class="mb-1">{{$listFrontendCommon['config_title']}}</p>
+                            <p class="description">{{loai_bo_html_tag($listFrontendCommon['config_descrtiption'])}}</p>
                         </div>
                     </div>
 

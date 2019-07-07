@@ -15,10 +15,12 @@
 
 @stop
 @section('styles')
+    {{ Html::style('css/core.home.css') }}
     {{ Html::style('css/home.css') }}
 @stop
 @section('scripts')
-
+    {{ Html::script('js/core.home.js') }}
+    {{ Html::script('js/home.js') }}
 @stop
 @section('slider')
     @include('frontend.00_common.slider')
@@ -28,4 +30,5 @@
     @include('frontend.01_home.h_1')
     @include('frontend.01_home.h_3')
     @include('frontend.01_home.h_4')
+    @include('frontend.01_home.h_5')
 @stop

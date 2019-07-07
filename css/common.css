@@ -6008,6 +6008,10 @@ readers do not read off random characters that represent icons */
   padding: 20px 10px 20px 0;
 }
 
+#menu_desktop .on-mid .slogan {
+  text-align: center;
+}
+
 #menu_desktop .on-mid .slogan p {
   width: 300px;
   font-size: 18px;
@@ -6015,6 +6019,10 @@ readers do not read off random characters that represent icons */
   color: #8AC12F;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+#menu_desktop .on-mid .slogan p.description {
+  font-size: 16px;
 }
 
 #menu_desktop .on-mid .address {
