@@ -22,6 +22,7 @@
     {{--{{ Html::style('css/core.frontend.css') }}--}}
     {{ Html::style('css/common.css') }}
     @yield('styles')
+    {!! $listFrontendCommon['config_script_header'] !!}
 </head>
 <body>
 @include('frontend.00_common.menu.menu_desktop')
@@ -43,7 +44,7 @@
 
 {{--<script src="{{URL::to("js/soft.js")}}"></script>--}}
 @yield('scripts')
-
+{!! $listFrontendCommon['config_script_body'] !!}
 </body>
 
 </html>
