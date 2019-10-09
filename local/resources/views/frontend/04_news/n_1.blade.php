@@ -42,7 +42,7 @@
                                     <div class="one-item mb-3 pb-3 d-flex  flex-md-row flex-column align-items-center border-bottom border-light">
                                         <a href="{{URL::to('tin-tuc/'.$item->slug)}}">
                                             <div class="img-detail-blogs"
-                                                 style="background-image:url({{URL::to($item->image)}});"></div>
+                                                 style="background-image:url({{URL::to($item->img_primary)}});"></div>
                                         </a>
                                         <div>
                                             <h4><a href="{{URL::to('tin-tuc/'.$item->slug)}}">{{$item->title}}</a></h4>

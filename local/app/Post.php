@@ -112,9 +112,9 @@ class Post extends Model
     public function getAllPostByPostType($postType, $take = 0)
     {
         if ($take != 0)
-            return $this->where('post_type', $postType)->take($take)->get();
+            return $this->where('post_type', $postType)->where('is_active',ACTIVE)->orderBy('created_at','DESC')->take($take)->get();
         else
-            return $this->where('post_type', $postType)->get();
+            return $this->where('post_type', $postType)->where('is_active',ACTIVE)->orderBy('created_at','DESC')->get();
     }
 
     protected static function boot()
